@@ -7,4 +7,6 @@ Quản lý cửa hàng nông nghiệp.
 2.2	Xuất kho. Gồm bán hàng và trả hàng người cung cấp
 2.3	Nhập kho. Gồm mua hàng từ nhà cung cấp và nhận hàng trả từ khách hàng.
 2.4	Thống kê báo cáo tổng kết theo thời gian công thu lời lãi.
-Đường dẫn file hướng dẫn sử dụng phần mềm : https://drive.google.com/file/d/0B_PYNK7AU-PQaE9vbTZVeUtaZXM/view?usp=sharing
+Đường dẫn file hướng dẫn sử dụng phần mềm : 
+https://drive.google.com/file/d/0B_PYNK7AU-PQeTU0ZjNMWFdRZXc/view?usp=sharing
+Nhóm ITCTT3 - Dev - VanTron
