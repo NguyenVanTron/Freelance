@@ -1,5 +1,6 @@
 # Freelance
 WindowApp Manager
+Xây dựng trên Visual Studio 2015
 Quản lý cửa hàng nông nghiệp.
 
 1.	Sử dụng Sqlsever để kết nối dữ liệu.
