@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ECDE128D-DE67-4E7B-BA3F-9D887AE6063B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MainProgram</RootNamespace>
+    <AssemblyName>MainProgram</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>school-material.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChangeDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeDatabase.Designer.cs">
+      <DependentUpon>ChangeDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DSPhieuXuat.cs">
+      <DependentUpon>DSPhieuXuat.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSPhieuXuat.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSPhieuXuat.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InPhieuBanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InPhieuBanHang.Designer.cs">
+      <DependentUpon>InPhieuBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemHang.Designer.cs">
+      <DependentUpon>ThemHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemKhachHang.Designer.cs">
+      <DependentUpon>ThemKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemNCC.Designer.cs">
+      <DependentUpon>ThemNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolPhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolPhieuNhap.Designer.cs">
+      <DependentUpon>ToolPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolPhieuTra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolPhieuTra.Designer.cs">
+      <DependentUpon>ToolPhieuTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolPhieuXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolPhieuXuat.Designer.cs">
+      <DependentUpon>ToolPhieuXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_BaoCaoCuoiKi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_BaoCaoCuoiKi.Designer.cs">
+      <DependentUpon>UC_BaoCaoCuoiKi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_BaoCaoTongHop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_BaoCaoTongHop.Designer.cs">
+      <DependentUpon>UC_BaoCaoTongHop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_CongNo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_CongNo.Designer.cs">
+      <DependentUpon>UC_CongNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_CongNoThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_CongNoThu.Designer.cs">
+      <DependentUpon>UC_CongNoThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_CongNoTra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_CongNoTra.Designer.cs">
+      <DependentUpon>UC_CongNoTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_DSPhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_DSPhieuNhap.Designer.cs">
+      <DependentUpon>UC_DSPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_DSPhieuTra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_DSPhieuTra.Designer.cs">
+      <DependentUpon>UC_DSPhieuTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_DSPhieuXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_DSPhieuXuat.Designer.cs">
+      <DependentUpon>UC_DSPhieuXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_NhaCungCap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_NhaCungCap.Designer.cs">
+      <DependentUpon>UC_NhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCS_KhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCS_KhachHang.Designer.cs">
+      <DependentUpon>UCS_KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_DSNhapHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_DSNhapHang.Designer.cs">
+      <DependentUpon>UC_DSNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_NhapHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_NhapHang.Designer.cs">
+      <DependentUpon>UC_NhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_PhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_PhieuNhap.Designer.cs">
+      <DependentUpon>UC_PhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_PhieuTraHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_PhieuTraHang.Designer.cs">
+      <DependentUpon>UC_PhieuTraHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_PhieuXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_PhieuXuat.Designer.cs">
+      <DependentUpon>UC_PhieuXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Report.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Report.Designer.cs">
+      <DependentUpon>UC_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ReportPXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ReportPXuat.Designer.cs">
+      <DependentUpon>UC_ReportPXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US_HangHoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="US_HangHoa.Designer.cs">
+      <DependentUpon>US_HangHoa.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ChangeDatabase.resx">
+      <DependentUpon>ChangeDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InPhieuBanHang.resx">
+      <DependentUpon>InPhieuBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="ThemHang.resx">
+      <DependentUpon>ThemHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemKhachHang.resx">
+      <DependentUpon>ThemKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemNCC.resx">
+      <DependentUpon>ThemNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolPhieuNhap.resx">
+      <DependentUpon>ToolPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolPhieuTra.resx">
+      <DependentUpon>ToolPhieuTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolPhieuXuat.resx">
+      <DependentUpon>ToolPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCS_KhachHang.resx">
+      <DependentUpon>UCS_KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_BaoCaoCuoiKi.resx">
+      <DependentUpon>UC_BaoCaoCuoiKi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_BaoCaoTongHop.resx">
+      <DependentUpon>UC_BaoCaoTongHop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_CongNo.resx">
+      <DependentUpon>UC_CongNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_CongNoThu.resx">
+      <DependentUpon>UC_CongNoThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_CongNoTra.resx">
+      <DependentUpon>UC_CongNoTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_DSNhapHang.resx">
+      <DependentUpon>UC_DSNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_DSPhieuNhap.resx">
+      <DependentUpon>UC_DSPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_DSPhieuTra.resx">
+      <DependentUpon>UC_DSPhieuTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_DSPhieuXuat.resx">
+      <DependentUpon>UC_DSPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_NhaCungCap.resx">
+      <DependentUpon>UC_NhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_NhapHang.resx">
+      <DependentUpon>UC_NhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_PhieuNhap.resx">
+      <DependentUpon>UC_PhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_PhieuTraHang.resx">
+      <DependentUpon>UC_PhieuTraHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_PhieuXuat.resx">
+      <DependentUpon>UC_PhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Report.resx">
+      <DependentUpon>UC_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ReportPXuat.resx">
+      <DependentUpon>UC_ReportPXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US_HangHoa.resx">
+      <DependentUpon>US_HangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DSPhieuXuat.xsc">
+      <DependentUpon>DSPhieuXuat.xsd</DependentUpon>
+    </None>
+    <None Include="DSPhieuXuat.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSPhieuXuat.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSPhieuXuat.xss">
+      <DependentUpon>DSPhieuXuat.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\DTO.BaoCaoTongHop_DTO.datasource" />
+    <None Include="Properties\DataSources\DTO.CongNoThu_DTO.datasource" />
+    <None Include="Properties\DataSources\DTO.CongNoTra_DTO.datasource" />
+    <None Include="Properties\DataSources\DTO.HangHoa_DTO.datasource" />
+    <None Include="Properties\DataSources\DTO.KhachHang_DTO.datasource" />
+    <None Include="Properties\DataSources\DTO.NhaCungCap_DTO.datasource" />
+    <None Include="Properties\DataSources\DTO.PhieuNhap_DTO.datasource" />
+    <None Include="Properties\DataSources\DTO.PhieuTraHang_DTO.datasource" />
+    <None Include="Properties\DataSources\DTO.PhieuXuat_DTO.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{85505f7e-4151-47e3-8ff9-8e00c715a01f}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{0a923d51-5f4f-4fad-9cfe-3d33dbe43f94}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\school-material.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\layers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bars-chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stats.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flour.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delivery-truck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash-register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checklist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\school-material %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office-material.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Microsoft Excel-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Microsoft Excel-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\len.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\research.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\research %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Microsoft Excel-642.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restart-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accept Database-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add Database-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Microsoft Excel-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculator-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Available Updates-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restart-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restart-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Available Updates-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add List-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="school-material.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
